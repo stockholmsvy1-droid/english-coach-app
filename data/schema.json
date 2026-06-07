@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "English Coach Import",
+  "type": "object",
+  "properties": {
+    "words": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "word",
+          "partOfSpeech",
+          "meanings",
+          "swedishExplanation",
+          "exampleSentences",
+          "commonMistakesForSwedes",
+          "synonyms",
+          "antonyms",
+          "ipa",
+          "ttsHint",
+          "tags"
+        ]
+      }
+    },
+    "phrases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "phrase", "swedishExplanation", "level", "tags"]
+      }
+    },
+    "dialogues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "level", "tags", "lines"]
+      }
+    }
+  },
+  "required": ["words", "phrases", "dialogues"]
+}
